@@ -1,0 +1,72 @@
+<div class="container-fluid mt-5">
+
+  <div class="d-flex justify-content-center">
+    <h3>你想對誰說幹話?</h3>
+  </div>
+
+  <form method="POST" action="/" class="row">
+
+    {{!-- Engineer --}}
+    <div class="col-sm-4">
+      <div class="mb-2">
+        <div class="card">
+          <div class="img" style="mh-100">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+              class="img-fluid" alt="Engineer Avatar" />
+          </div>
+          <div class="input-group-text d-flex justify-content-center">
+            <input type="radio" name="target" value="engineer" aria-label="Radio button for following text input">
+            <h5 class="card-title ml-2">工程師</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{!-- Designer --}}
+    <div class="col-sm-4">
+      <div class="mb-2">
+        <div class="card">
+          <div class="img " style="mh-100">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+              class="img-fluid" alt="Designer Avatar" />
+          </div>
+          <div class="input-group-text d-flex justify-content-center">
+            <input type="radio" name="target" value="designer" aria-label="Radio button for following text input">
+            <h5 class="card-title ml-2">設計師</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{!-- Entrepreneur --}}
+    <div class="col-sm-4">
+      <div class="mb-2">
+        <div class="card">
+          <div class="img" style="mh-100">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+              class="img-fluid" alt="Entrepreneur Avatar" />
+          </div>
+          <div class="input-group-text d-flex justify-content-center">
+            <input type="radio" name="target" value="entrepreneur" aria-label="Radio button for following text input">
+            <h5 class="card-title ml-2">創業家</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body row ml-2">
+      <button class="btn btn-success" type="submit">產生幹話</button>
+      {{!--  show trash talk  --}}
+
+      <h3>
+        {{#if trashTalk }}
+        {{trashTalk}}
+        {{/if}}
+      </h3>
+    </div>
+
+  </form>
+
+
+
+
+</div>
